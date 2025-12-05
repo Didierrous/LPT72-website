@@ -1,0 +1,72 @@
+    /* Estilos generales para la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('ComedorLPT72.jpg'); /* Imagen de fondo */
+            background-size: cover;  /* Ajusta la imagen al tamaño de la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white; /* Texto blanco para que contraste con la imagen */
+        }
+
+        /* Foto de perfil */
+        .foto-perfil {
+            width: 250px; /* Ajusta el ancho de la imagen */
+            height: 180px; /* Ajusta el alto de la imagen */
+            border-radius: 50%; /* Hace que la imagen sea redonda */
+            object-fit: cover; /* Asegura que la imagen se recorte y llene el espacio */
+            display: block; /* Hace que la imagen se comporte como un bloque */
+            margin: 90px auto 20px; /* Centra la imagen horizontalmente y agrega un margen superior */
+        } 
+
+        /* Títulos y texto */
+        h1 {
+            color: #d70f0f;
+        }
+
+        h3, h4 {
+            color: white;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #777;
+        }
+
+        /* Estilo de los botones */
+        .botones-container {
+            display: flex;
+            justify-content: center; /* Centra los botones */
+            gap: 20px; /* Espacio entre los botones */
+            margin-top: 40px; /* Margen superior */
+        }
+
+        button {
+            background-color: #f5f5dc;  /* Color de fondo */
+            color: black;                /* Color del texto */
+            padding: 10px 20px;          /* Espaciado interno */
+            font-size: 16px;             /* Tamaño de la fuente */
+            cursor: pointer;            /* Cambia el cursor a mano */
+            border: none;                /* Quita el borde del botón */
+            border-radius: 5px;          /* Borde redondeado */
+        }
+
+        /* Foto del comedor */
+        .foto-comedor {
+            width: 350px; /* Ajusta el ancho de la imagen */
+            height: 180px; /* Ajusta el alto de la imagen */
+            border-radius: 50%; /* Hace que la imagen sea redonda */
+            object-fit: cover; /* Asegura que la imagen se recorte y llene el espacio */
+            display: block; /* Hace que la imagen se comporte como un bloque */
+            margin: 20px auto; /* Centra la imagen horizontalmente y agrega un pequeño espacio arriba y abajo */
+           
+            button:hover {
+    background-color: #d70f0f; /* Cambia el color de fondo al pasar el mouse */
+    color: white; /* Cambia el color del texto */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    transition: all 0.3s ease; /* Hace que el cambio sea suave */
+}
+
+        }
