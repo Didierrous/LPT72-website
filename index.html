@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"> /*permite  las Ñ*/
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> /*ADAPTABLE*/
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>⛰️ Los Pinches Tacos 72 🌮</title>
 
     <style>
+        /* MODAL (pantalla oscura) */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            padding-top: 80px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Imagen dentro del modal */
+        .modal-contenido {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        /* Botón cerrar (X) */
+        .cerrar {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
         /* Estilos generales para la página */
         body {
-            
             font-family: Arial, sans-serif;
-            background-image: url('ComedorLPT72.jpg'); /* Imagen de fondo */
-            background-size: cover;  /* Ajusta la imagen al tamaño de la pantalla */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-image: url('ComedorLPT72.jpg'); 
+            background-size: cover;  
+            background-position: center; 
+            background-repeat: no-repeat; 
             margin: 0;
             padding: 0;
             text-align: center;
-            color: white; /* Texto blanco para que contraste con la imagen */
+            color: white;
         }
 
         /* Foto de perfil */
         .foto-perfil {
-            width: 250px; /* Ajusta el ancho de la imagen */
-            height: 180px; /* Ajusta el alto de la imagen */
-            border-radius: 50%; /* Hace que la imagen sea redonda */
-            object-fit: cover; /* Asegura que la imagen se recorte y llene el espacio */
-            display: block; /* Hace que la imagen se comporte como un bloque */
-            margin: 90px auto 20px; /* Centra la imagen horizontalmente y agrega un margen superior */
+            width: 250px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 90px auto 20px;
         } 
-
-        /* Títulos y texto */
-        h1 {
-            color: #d70f0f;
-        }
 
         h3, h4 {
             color: white;
@@ -44,66 +71,77 @@
             color: #777;
         }
 
-        /* Estilo de los botones */
+        /* Botones centrados */
         .botones-container {
             display: flex;
-            justify-content: center; /* Centra los botones */
-            gap: 20px; /* Espacio entre los botones */
-            margin-top: 40px; /* Margen superior */
+            justify-content: center; 
+            gap: 20px; 
+            margin-top: 40px; 
         }
 
         button {
-            background-color: #f5f5dc;  /* Color de fondo */
-            color: black;                /* Color del texto */
-            padding: 10px 20px;          /* Espaciado interno */
-            font-size: 16px;             /* Tamaño de la fuente */
-            cursor: pointer;            /* Cambia el cursor a mano */
-            border: none;                /* Quita el borde del botón */
-            border-radius: 5px;          /* Borde redondeado */
-        }
-
-        /* Foto del comedor */
-        .foto-comedor {
-            width: 350px; /* Ajusta el ancho de la imagen */
-            height: 180px; /* Ajusta el alto de la imagen */
-            border-radius: 50%; /* Hace que la imagen sea redonda */
-            object-fit: cover; /* Asegura que la imagen se recorte y llene el espacio */
-            display: block; /* Hace que la imagen se comporte como un bloque */
-            margin: 20px auto; /* Centra la imagen horizontalmente y agrega un pequeño espacio arriba y abajo */
-
-
-            <button id="botonMenu">Ver menú</button>
-
-<!-- Imagen del menú (oculta al inicio) -->
-<img id="fotoMenu" src="menu.jpg" alt="Menú del restaurante" class="foto-menu" style="display: none;">
-
-
-        
+            background-color: #f5f5dc;  
+            color: black;                
+            padding: 10px 20px;          
+            font-size: 16px;             
+            cursor: pointer;            
+            border: none;                
+            border-radius: 5px;          
         }
     </style>
 </head>
-
+Ven a Probar Nuetros Deliciosos Platillos
+ A Base De Sirloin 100% Tacos, Piratas, Burritos, Papas Asadas, Corte T-Bone,
+ Frijoles A La Charra, Salchicha Rojas, Jalapeño Con Queso Y Tocino
 <body>
     <!-- Foto de Perfil -->
     <img src="LPT72.jpg" alt="Logo de LPT72" class="foto-perfil">
 
     <!-- Inicio de Presentación -->
     <h1>Bienvenidos a Los Pinches Tacos 72 ⛰️</h1><br>
-    <h3>Ven a disfrutar de nuestro delicioso menú</h3>
-    <h4>Contamos con mucha variedad, desde ricos frijoles a la charra hasta nuestra especialidad<br><br>
-    <b>El Corte de Carne T-Bone🥩</b></h4>
-
-    <!-- Foto del Comedor -->
-    <img src="ComedorLPT72.jpg" alt="Foto de Comedor" class="foto-comedor">
+    <h2>Ven a Probar Nuetros Deliciosos Platillos</h2>
+    <br>
+    <h3>A Base De 100% Sirloin, Tacos, Piratas, Burritos, Papas Asadas, Corte T-Bone,<br><br>
+    <b> Frijoles A La Charra, Salchicha Rojas, Jalapeño Con Queso Y Tocino🥩</b></h3>
 
     <!-- Botones centrados -->
     <div class="botones-container">
-        <button>Menú Regio</button>
-        <button>Direccion</button>
-        <button>Horarios</button>
+        <button id="btnmenu">Menú Regio</button>
+        <button id="btnubicacion">Ubicacion</button>
+        <button id="btnhorario">Horarios</button>
     </div>
 
-    <p>Con la tradición de Monterrey,  los venimos a acompañar</p>
+    <h3><i>Con la tradición de Monterrey los venimos a acompañar</i></h3>
+
+    <!-- Ventana Modal única -->
+    <div id="modalmenu" class="modal">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imgmenu">
+    </div>
+
+    <script>
+        const modal = document.getElementById("modalmenu");
+        const imgModal = document.getElementById("imgmenu");
+        const cerrar = document.querySelector(".cerrar");
+
+        // Función para abrir modal con la imagen correspondiente
+        function abrirModal(foto) {
+            imgModal.src = foto; 
+            modal.style.display = "block";
+        }
+
+        // Asignar a cada botón la foto que debe mostrar
+        document.getElementById("btnmenu").onclick = () => abrirModal("menu.jpg");
+        document.getElementById("btnubicacion").onclick = () => abrirModal("ubicacion.png");
+        document.getElementById("btnhorario").onclick = () => abrirModal("horario.png");
+
+        // Cerrar modal
+        cerrar.onclick = () => modal.style.display = "none";
+
+        // Cerrar si hace clic fuera de la imagen
+        window.onclick = function(event) {
+            if(event.target == modal) modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
-
