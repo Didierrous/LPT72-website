@@ -92,6 +92,28 @@
             border: none;                
             border-radius: 5px;          
         }
+            /* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.whatsapp-icon {
+    width: 40px;
+    height: 40px;
+    filter: invert(1); /* Icono blanco */
+}
+
 
     </style>
 </head>
@@ -115,7 +137,12 @@
     </div>
 
     <h3><i>Con la tradición de Monterrey los venimos a acompañar</i></h3>
-        
+             <!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/522222394714" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon">
+</a>
+
+
 
 
 
@@ -153,6 +180,7 @@
     </script>
 </body>
 </html>
+
 
 
 
