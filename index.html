@@ -145,6 +145,63 @@
      
 }
 
+
+/* Modal general */
+.modal {
+    display: none; /* oculto por defecto */
+    position: fixed; /* sobre todo el contenido */
+    z-index: 2000; /* encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8); /* fondo oscuro semitransparente */
+    overflow: auto;
+    padding-top: 50px;
+}
+
+/* Contenedor del pergamino dentro del modal */
+.historia-container {
+    position: relative;
+    max-width: 700px;
+    margin: 50px auto; /* centrado vertical y horizontal */
+    text-align: center;
+}
+
+.pergamino {
+    width: 100%;
+    border-radius: 10px;
+}
+.historia-texto {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    color: #000000; /* texto negro */
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 10; /* sobre el pergamino */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* opcional, para darle profundidad */
+}
+
+
+
+
+
+/* Botón cerrar */
+.modal .cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
     </style>
 </head>
 
@@ -218,7 +275,64 @@
         window.onclick = function(event) {
             if (event.target == modal) modal.style.display = "none";
         }
+
+function abrirHistoria() {
+    document.getElementById('modalHistoria').style.display = 'block';
+}
+
+function cerrarHistoria() {
+    document.getElementById('modalHistoria').style.display = 'none';
+}
+
+// Cerrar al hacer click fuera del contenido
+window.onclick = function(event) {
+    const modal = document.getElementById('modalHistoria');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+        
+function showSection(id) {
+    // Oculta todas las secciones
+    document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+    // Muestra la sección seleccionada
+    document.getElementById(id).style.display = 'block';
+}
     </script>
+
+ 
+
+<!-- Barra lateral -->
+<div class="sidebar">
+    <button onclick="abrirHistoria()">Nuestra Historia</button>
+</div>
+
+<!-- Modal de Nuestra Historia -->
+<div id="modalHistoria" class="modal">
+    <span class="cerrar" onclick="cerrarHistoria()">&times;</span>
+    <div class="historia-container">
+        <img src="pergamino.png" alt="Pergamino" class="pergamino">
+        <div class="historia-texto">
+           <br><i> <h2>Nuestra Historia</h2></i><br><br><br>
+            <p>
+                Los Pinches Tacos 72 comenzó en <strong>Monterrey en 2015</strong>,
+                 con la pasión de llevar tacos auténticos a cada cliente.<br>
+                Posteriormente, nos trasladamos a <strong>Puebla<br></strong>,
+                 conservando nuestra tradición y sabor único.<br>
+                Este proyecto nació de los fundadores <br> de la <strong>
+                    familia Valdez Ramírez</strong>, y poco a poco<br> fue creciendo<br>
+                     hasta convertirse en un <strong>negocio familiar reconocido</strong>
+                      por su calidad y autenticidad.<br>
+                Hoy seguimos manteniendo los valores de <strong>
+                    trabajo en familia, pasión por la cocina y atención a nuestros clientes<br>
+                </strong>, para que cada taco sea una experiencia inolvidable.
+            </p>
+        </div>
+    </div>
+</div>
+
+
 
 </body>
 </html>
