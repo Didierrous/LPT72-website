@@ -16,6 +16,8 @@
      T-Bone, frijoles charros y el mejor menú del norte. Visítanos y disfruta de Monterrey en cada plato.">
 
     <style>
+
+       
         /* MODAL (pantalla oscura) */
         .modal {
             display: none; 
@@ -121,6 +123,28 @@
             height: 40px;
             filter: invert(1);
         }
+        
+.facebook-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px;
+    right: 30px;
+   background-color: #25D366;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+}
+.facebook-icon{
+    width: 60px;
+    height: 60px;
+    filter: invert(1);
+     
+}
+
     </style>
 </head>
 
@@ -129,12 +153,22 @@
     <!-- Foto de Perfil --><!-- Foto de Perfil -->
 <img src="escudo.png" alt="Logo de LPT72" class="foto-perfil">
 
+<!--Fondo oscuro detras de las letras de presentacion-->
+<div style="
+    background-color: rgba(0,0,0,0.5); 
+    color: white; 
+    padding: 20px; 
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+">
     <!-- Inicio de Presentación -->
     <h1>Bienvenidos a Los Pinches Tacos 72 🌮</h1>
-    <h2>Ven a Probar Nuestros Deliciosos Platillos</h2>
+    <h2>Donde cada mordida es una explosión de sabor 🔥</h2>
 
-    <h3>A Base De 100% Sirloin, Tacos, Piratas, Burritos, Papas Asadas, Corte T-Bone,<br><br>
-    <b>Frijoles A La Charra, Salchicha Rojas, Jalapeño Con Queso Y Tocino🥩</b></h3>
+    <h3>Disfruta de nuestros Tacos, Burritos, Papas Asadas y
+         el irresistible Corte T-Bone, todo preparado con 100% sirloin🥩</b></h3>
 
     <!-- Botones centrados -->
     <div class="botones-container">
@@ -149,6 +183,12 @@
     <a href="https://wa.me/522222394714" class="whatsapp-float" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon">
     </a>
+
+    <!-- Botón flotante de Facebook -->
+<a href="https://www.facebook.com/people/Los-Pinches-Tacos-72/61569396328813/" class="facebook-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png" class="facebook-icon">
+</a>
+
 
     <!-- Ventana Modal única -->
     <div id="modalmenu" class="modal">
