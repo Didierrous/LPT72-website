@@ -11,16 +11,7 @@
             color: white; /* Texto blanco para que contraste con la imagen */
         }
 
-        /* Foto de perfil */
-         .foto-perfil {
-    width: 350px;       /* Tamaño del cuadrado */
-    height: 250px;      /* Igual que el width = CUADRADA */
-    object-fit: cover;  /* Recorta proporcionalmente */
-    border-radius: 10px; /* Esquinas ligeramente redondeadas (puedo quitarlas si quieres) */
-    display: block;
-    margin: 20px auto;  /* Centrada */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra bonita */
-}
+       
 
 
         /* Títulos y texto */
@@ -73,4 +64,5 @@
 
 
         }
+
 
