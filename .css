@@ -13,8 +13,8 @@ body {
 
 /* Foto de perfil */
 .foto-perfil {
-    width: 350px;
-    height: 350px; /* CUADRADA */
+    width: 650px;
+    height: 650px; /* CUADRADA */
     object-fit: cover;
     border-radius: 10px;
     display: block;
@@ -70,3 +70,4 @@ button:hover {
     display: block;
     margin: 20px auto;
 }
+
