@@ -11,6 +11,7 @@
             color: white; /* Texto blanco para que contraste con la imagen */
         }
 
+<<<<<<< HEAD
         /* Foto de perfil */
      .foto-perfil {
     width: 350px;       /* Tamaño del cuadrado */
@@ -21,6 +22,9 @@
     margin: 20px auto;  /* Centrada */
     box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra bonita */
 }
+=======
+       
+>>>>>>> 980e0ed93c50710779ba5be8795f13625bf3c73e
 
 
         /* Títulos y texto */
@@ -71,4 +75,7 @@
     transition: all 0.3s ease; /* Hace que el cambio sea suave */
 }
 
+
         }
+
+
