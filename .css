@@ -13,7 +13,7 @@
 
         /* Foto de perfil */
          .foto-perfil {
-    width: 250px;       /* Tamaño del cuadrado */
+    width: 350px;       /* Tamaño del cuadrado */
     height: 250px;      /* Igual que el width = CUADRADA */
     object-fit: cover;  /* Recorta proporcionalmente */
     border-radius: 10px; /* Esquinas ligeramente redondeadas (puedo quitarlas si quieres) */
@@ -73,3 +73,4 @@
 
 
         }
+
