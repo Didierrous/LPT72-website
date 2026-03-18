@@ -74,9 +74,9 @@ button:hover {
 }
 .facebook-float {
     position: fixed;
-    width: 55px;
-    height: 55px;
-    bottom: 95px;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
     right: 20px;
     background-color: #1877F2;
     border-radius: 50%;
