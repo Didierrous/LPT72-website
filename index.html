@@ -192,7 +192,10 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
     </style>
 </head>
@@ -201,12 +204,12 @@
 
     
 <!-- TELÉFONO (AFUERA DEL MODAL) -->
-<a href="tel:+522222394714" class="telefono-float">
+<a  href="tel:+522222394714" class="telefono-float animar">
     📞 222 239 4714
 </a>
 
     <!-- Foto de Perfil --><!-- Foto de Perfil -->
-<img src="escudo.png" alt="Logo de LPT72" class="foto-perfil">
+<img src="escudo.png" alt="Logo de LPT72" class="foto-perfil animar">
 
 <!--Fondo oscuro detras de las letras de presentacion-->
 <div style="
@@ -226,7 +229,7 @@
          el irresistible Corte T-Bone, todo preparado con 100% sirloin🥩</b></h3>
 
     <!-- Botones centrados -->
-    <div class="botones-container">
+    <div class="botones-container animar">
         <button id="btnmenu">Menú Regio</button>
         <button id="btnubicacion">Ubicación</button>
         <button id="btnhorario">Horarios</button>
@@ -235,20 +238,20 @@
     <h3><i>Con la tradición de Monterrey los venimos a acompañar</i></h3>
 
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/522222394714" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/522222394714" class="whatsapp-float animar" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon">
     </a>
 
     <!-- Botón flotante de Facebook -->
 <a href="https://www.facebook.com/people/Los-Pinches-Tacos-72/61569396328813/" 
-   class="facebook-float" target="_blank">
+   class="facebook-float animar" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png" 
          class="facebook-icon">
 </a>
 
 
     <!-- Ventana Modal única -->
-    <div id="modalmenu" class="modal">
+    <div id="modalmenu" class="modal animar">
         <span class="cerrar">&times;</span>
         <img class="modal-contenido" id="imgmenu">
     </div>
