@@ -107,3 +107,8 @@ button:hover {
     object-fit: contain;
 }
 
+.pergamino {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+}
