@@ -149,8 +149,6 @@
 
 
 
-
-
 /* Modal general */
 .modal {
     display: none; /* oculto por defecto */
@@ -165,30 +163,8 @@
     padding-top: 50px;
 }
 
-/* Contenedor del pergamino dentro del modal */
-.historia-container {
-    position: relative;
-    max-width: 700px;
-    margin: 50px auto; /* centrado vertical y horizontal */
-    text-align: center;
-}
 
-.pergamino {
-    width: 100%;
-    border-radius: 10px;
-}
-.historia-texto {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    color: #000000; /* texto negro */
-    font-weight: bold;
-    padding: 15px;
-    border-radius: 10px;
-    z-index: 10; /* sobre el pergamino */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* opcional, para darle profundidad */
-}
+
 
 /* Botón cerrar */
 .modal .cerrar {
@@ -315,7 +291,7 @@ function showSection(id) {
 <div id="modalHistoria" class="modal">
     <span class="cerrar" onclick="cerrarHistoria()">&times;</span>
     <div class="historia-container">
-        <img src="pergamino.png" alt="Pergamino" class="pergamino">
+        <img src="Pergaminocorrecto.png" alt="Pergamino" class="pergamino">
        
         <div class="historia-texto">
           
