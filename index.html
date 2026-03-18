@@ -191,8 +191,10 @@
     z-index: 2000;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-
-.animar.visible {
+.animar {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
     opacity: 1;
     transform: translateY(0);
 }
@@ -302,6 +304,19 @@ function showSection(id) {
     // Muestra la sección seleccionada
     document.getElementById(id).style.display = 'block';
 }
+
+
+// Animación al 
+//cargar
+window.addEventListener("load", () => {
+    const elementos = document.querySelectorAll(".animar");
+
+    elementos.forEach((el, i) => {
+        setTimeout(() => {
+            el.classList.add("visible");
+        }, i * 300); // retraso entre elementos
+    });
+});
     </script>
 
  

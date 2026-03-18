@@ -136,7 +136,10 @@ button:hover {
     transition: all 0.8s ease;
 }
 
-.animar.visible {
+.animar {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
     opacity: 1;
     transform: translateY(0);
 }
