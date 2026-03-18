@@ -72,4 +72,18 @@ button:hover {
     display: block;
     margin: 20px auto;
 }
+.facebook-float {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 95px;
+    right: 20px;
+    background-color: #1877F2;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
 
