@@ -176,6 +176,19 @@
     font-weight: bold;
     cursor: pointer;
 }
+.telefono-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    z-index: 2000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
 
 
@@ -183,6 +196,12 @@
 </head>
 
 <body>
+
+    
+<!-- TELÉFONO (AFUERA DEL MODAL) -->
+<a href="tel:+522222394714" class="telefono-float">
+    📞 222 239 4714
+</a>
 
     <!-- Foto de Perfil --><!-- Foto de Perfil -->
 <img src="escudo.png" alt="Logo de LPT72" class="foto-perfil">
@@ -297,16 +316,8 @@ function showSection(id) {
     </div>
 
 </div>
-        
-           
+       
 
-
-
-
-<!-- TELÉFONO (AFUERA DEL MODAL) -->
-<a href="tel:+522222394714" class="telefono-float">
-    📞 222 239 4714
-</a>
 
 
 
