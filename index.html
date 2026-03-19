@@ -198,12 +198,24 @@
     opacity: 1;
     transform: translateY(0);
 }
+#video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* 👈 atrás de todo */
+}
 
     </style>
 </head>
 
 <body>
 
+    <video autoplay muted loop id="video-fondo">
+    <source src="fondo de fuego.mp4" type="video/mp4">
+</video>
     
 <!-- TELÉFONO (AFUERA DEL MODAL) -->
 <a  href="tel:+522222394714" class="telefono-float animar">
