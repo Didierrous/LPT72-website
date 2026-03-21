@@ -47,20 +47,42 @@ p {
 }
 
 button {
-    background-color: #f5f5dc;
-    color: black;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    background: linear-gradient(45deg, #ff0000, #ff7a00, #ff0000);
+    background-size: 300% 300%;
+    color: white;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 900;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(255, 80, 0, 0.8);
+
+    animation: fuego 2s infinite linear;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* 🔥 ANIMACIÓN */
+@keyframes fuego {
+    0% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
+    }
+    50% {
+        background-position: 100% 50%;
+        box-shadow: 0 0 30px rgba(255, 120, 0, 1);
+    }
+    100% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
+    }
+}
+
+/* 🔥 HOVER */
 button:hover {
-    background-color: #d70f0f;
-    color: white;
-    transform: scale(1.1);
-    transition: all 0.3s ease;
+    transform: scale(1.12);
+    box-shadow: 0 0 35px rgba(255, 100, 0, 1);
 }
 
 /* Foto del comedor */
