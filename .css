@@ -26,11 +26,25 @@ body {
 
 /* Títulos y texto */
 h1 {
-    color: #d70f0f;
+    font-size: 48px;
+    font-weight: 800;
+    color: #ff3c00;
+    text-shadow: 
+        0 0 10px rgba(255, 60, 0, 0.8),
+        0 0 20px rgba(255, 100, 0, 0.6);
+}
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 10px;
 }
 
-h3, h4 {
-    color: white;
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #f2f2f2;
+    line-height: 1.6;
 }
 
 p {
