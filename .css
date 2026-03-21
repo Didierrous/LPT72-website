@@ -8,23 +8,30 @@
 /* ESTILO GENERAL */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('ComedorLPT72.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     text-align: center;
     color: white;
 }
 
+/* 🔥 CAJA CENTRAL (MUY IMPORTANTE) */
+.caja-central {
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px); /* 🔥 efecto glass */
+    -webkit-backdrop-filter: blur(6px);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
 /* FOTO DE PERFIL */
 .foto-perfil {
+    display: block;
+    margin: 20px auto;
     width: 350px;
     max-width: 90%;
     height: auto;
-    object-fit: cover;
     border-radius: 10px;
-    display: block;
-    margin: 20px auto; /* 🔥 centrado correcto */
 }
 
 /* TÍTULOS */
@@ -38,12 +45,17 @@ h2 {
     margin-top: 10px;
 }
 
+h3 {
+    margin-top: 15px;
+}
+
+/* TEXTO */
 p {
     font-size: 1.2em;
     color: #f2f2f2;
 }
 
-/* CONTENEDOR BOTONES */
+/* BOTONES CONTENEDOR */
 .botones-container {
     display: flex;
     justify-content: center;
@@ -70,7 +82,7 @@ button {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 🔥 ANIMACIÓN MEJORADA */
+/* 🔥 ANIMACIÓN */
 @keyframes fuego {
     0% {
         background-position: 0% 50%;
@@ -86,19 +98,10 @@ button {
     }
 }
 
-/* 🔥 HOVER */
+/* HOVER */
 button:hover {
     transform: scale(1.12);
     box-shadow: 0 0 35px rgba(255, 100, 0, 1);
-}
-
-/* FOTO COMEDOR */
-.foto-comedor {
-    width: 300px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 20px auto;
 }
 
 /* BOTÓN FACEBOOK */
@@ -151,18 +154,6 @@ button:hover {
     z-index: 2000;
 }
 
-/* ANIMACIÓN */
-.animar {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
-}
-
-.animar.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* VIDEO FONDO */
 #video-fondo {
     position: fixed;
@@ -174,7 +165,7 @@ button:hover {
     z-index: -1;
 }
 
-/* 📱 RESPONSIVE (CELULAR) */
+/* 📱 RESPONSIVE */
 @media (max-width: 600px) {
     h1 {
         font-size: 28px;

@@ -41,41 +41,13 @@
     cursor: pointer;
 }
 
-/* BOTONES */
+/* BOTONES (solo estructura, el diseño queda en tu CSS externo) */
 .botones-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 40px;
     flex-wrap: wrap;
-}
-
-/* 🔥 BOTÓN FUEGO */
-button {
-    background: linear-gradient(45deg, #ff0000, #ff7a00, #ff0000);
-    background-size: 200% 200%;
-    color: white;
-    padding: 16px 32px;
-    font-size: 18px;
-    font-weight: 900;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    box-shadow: 0 0 15px rgba(255, 80, 0, 0.8);
-
-    animation: fuego 2s infinite linear;
-    transition: transform 0.3s ease;
-}
-
-@keyframes fuego {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-button:hover {
-    transform: scale(1.15);
 }
 
 /* FLOATS */
@@ -123,6 +95,12 @@ button:hover {
     z-index: -1;
 }
 
+/* 🔥 ARREGLO CLAVE (imagen centrada) */
+.foto-perfil {
+    display: block;
+    margin: 20px auto;
+}
+
 </style>
 </head>
 
@@ -142,7 +120,7 @@ button:hover {
 <img src="escudo.png" class="foto-perfil">
 
 <!-- CONTENIDO -->
-<div style="background: rgba(0,0,0,0.5); color: white; padding:20px; border-radius:10px; max-width:800px; margin:auto;">
+<div class="caja-central">
 
 <h1>Bienvenidos a Los Pinches Tacos 72 🌮</h1>
 <h2>Donde cada mordida es una explosión de sabor 🔥</h2>
