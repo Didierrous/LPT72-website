@@ -1,7 +1,7 @@
 /* Estilos generales para la página */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('ComedorLPT72.jpg'); /* Imagen de fondo */
+    background-image: url('ComedorLPT72.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@ body {
 /* Foto de perfil */
 .foto-perfil {
     width: 650px;
-    height: 650px; /* CUADRADA */
+    height: 650px;
     object-fit: cover;
     border-radius: 10px;
     display: block;
@@ -22,62 +22,83 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-
-
-/* Títulos y texto */
+/* Títulos */
 h1 {
-    color: #d70f0f;
+    color: #ff3c00;
+    font-size: 40px;
+    text-shadow: 0 0 10px rgba(255, 60, 0, 0.7);
 }
 
-h3, h4 {
-    color: white;
-}
-
+/* Texto */
 p {
     font-size: 1.2em;
     color: #f2f2f2;
 }
 
-/* Contenedor de botones */
+/* Contenedor botones */
 .botones-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
+/* 🔥 BOTÓN FUEGO */
 button {
-    background-color: #f5f5dc;
-    color: black;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #d70f0f;
+    background: linear-gradient(45deg, #ff0000, #ff7a00, #ff0000);
+    background-size: 200% 200%;
     color: white;
-    transform: scale(1.1);
-    transition: all 0.3s ease;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(255, 80, 0, 0.8);
+    
+    animation: fuego 2s infinite linear;
+    transition: transform 0.3s ease;
 }
 
-/* Foto del comedor */
+/* 🔥 ANIMACIÓN FUEGO */
+@keyframes fuego {
+    0% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
+    }
+    50% {
+        background-position: 100% 50%;
+        box-shadow: 0 0 25px rgba(255, 120, 0, 1);
+    }
+    100% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
+    }
+}
+
+/* 🔥 HOVER */
+button:hover {
+    transform: scale(1.15);
+}
+
+/* Foto comedor */
 .foto-comedor {
     width: 350px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
     margin: 20px auto;
 }
+
+/* Botón Facebook */
 .facebook-float {
     position: fixed;
     width: 65px;
     height: 65px;
     bottom: 25px;
-    right: 20px;
+    right: 90px;
     background-color: #1877F2;
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
@@ -87,6 +108,7 @@ button:hover {
     z-index: 2000;
 }
 
+/* Botón WhatsApp */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -101,54 +123,41 @@ button:hover {
     align-items: center;
     z-index: 2000;
 }
-        .whatsapp-float img {
-    width: 32px !important;
-    height: 32px !important;
-    object-fit: contain;
+
+.whatsapp-float img {
+    width: 32px;
+    height: 32px;
 }
 
-.pergaminonormal {
-    width: 90%;
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-
+/* Teléfono */
 .telefono-float {
     position: fixed;
     bottom: 20px;
-     left: 20px; /* 👈 lo manda a la izquierda */
-    color: white; /* 👈 letras blancas */
-    font-weight: bold; /* 👈 negritas */
+    left: 20px;
     background-color: rgba(0,0,0,0.6);
-    color: white;
     padding: 10px 15px;
     border-radius: 8px;
     font-size: 20px;
-    font-family: Arial, sans-serif;
-    z-index: 2000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-weight: bold;
 }
 
-.animar {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
+/* Animación */
 .animar {
     opacity: 0;
     transform: translateY(50px);
     transition: all 1s ease;
+}
+
+.animar.activo {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Video fondo */
 #video-fondo {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* 👈 atrás de todo */
+    z-index: -1;
 }
