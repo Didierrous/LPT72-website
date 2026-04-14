@@ -6,65 +6,93 @@
 
 <title>Los Pinches Tacos 72</title>
 
-<link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
-</head>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
+</head>
 <body>
 
-<!-- 🔥 HERO -->
+<!-- VIDEO FONDO -->
+<video autoplay muted loop id="video-bg">
+    <source src="fondo.mp4" type="video/mp4">
+</video>
+
+<!-- REDES -->
+<a href="https://wa.me/522222394714" class="whatsapp" target="_blank">🟢</a>
+<a href="https://facebook.com" class="facebook" target="_blank">🔵</a>
+
+<!-- HERO -->
 <section class="hero">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <h1>LOS PINCHES TACOS 72</h1>
-        <p>Sabor regio que no perdona 🔥</p>
-
-        <a href="menu.html" class="btn">VER MENÚ</a>
-    </div>
-
+    <h1>LOS PINCHES TACOS 72</h1>
+    <p>Sabor regio que no perdona 🔥</p>
 </section>
 
-<!-- 🍖 SECCIÓN INFO -->
-<section class="info">
+<!-- SECCIÓN COMIDA -->
+<section class="menu">
+    <h2>NUESTROS FAVORITOS</h2>
 
-    <h2>🔥 ¿POR QUÉ AQUÍ?</h2>
-
-    <div class="grid">
-
+    <div class="cards">
         <div class="card">
-            <h3>🥩 CARNE REAL</h3>
-            <p>100% sirloin al carbón</p>
+            <img src="taco1.jpg">
+            <h3>Tacos de Bistec</h3>
         </div>
 
         <div class="card">
-            <h3>🌮 SABOR REGIO</h3>
-            <p>Como en Monterrey</p>
+            <img src="taco2.jpg">
+            <h3>Tacos de Trompo</h3>
         </div>
 
         <div class="card">
-            <h3>🔥 BIEN SERVIDO</h3>
-            <p>Porciones que sí llenan</p>
+            <img src="taco3.jpg">
+            <h3>Tacos de Pollo</h3>
         </div>
-
     </div>
-
 </section>
 
-<!-- 📍 FOOTER -->
+<!-- PROMOCIONES -->
+<section class="promo">
+    <h2>PROMOCIONES 🔥</h2>
+
+    <div class="promo-box">
+        <h3>🔥 Paquete Familiar</h3>
+        <p>6 órdenes + bebidas + frijoles</p>
+    </div>
+
+    <div class="promo-box">
+        <h3>🌮 Promo Taco Night</h3>
+        <p>3x2 todos los martes</p>
+    </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section class="experience">
+    <h2>¿POR QUÉ VENIR?</h2>
+
+    <div class="reasons">
+        <div>🥩 Carne 100% Sirloin</div>
+        <div>🔥 Asado al carbón</div>
+        <div>🌮 Sabor regio auténtico</div>
+        <div>🍻 Ambiente familiar</div>
+    </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="gallery">
+    <h2>LO QUE TE ESPERA</h2>
+
+    <div class="images">
+        <img src="comida1.jpg">
+        <img src="comida2.jpg">
+        <img src="comida3.jpg">
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    <p>📍 Monterrey Style</p>
+    <p>© 2026 Los Pinches Tacos 72</p>
 </footer>
 
-<!-- 📲 BOTONES FLOTANTES -->
-<div class="floating">
-
-    <a href="https://wa.me/522222394714" target="_blank" class="whatsapp">🟢</a>
-
-    <a href="https://www.facebook.com/" target="_blank" class="facebook">🔵</a>
-
-</div>
+<script src="script.js"></script>
 
 </body>
 </html>
