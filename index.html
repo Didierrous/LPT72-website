@@ -7,53 +7,62 @@
 <title>Los Pinches Tacos 72</title>
 
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- 🔥 VIDEO FONDO -->
-<video autoplay muted loop playsinline id="video-fondo">
+<!-- 🎥 VIDEO FONDO -->
+<video autoplay muted loop playsinline id="bgVideo">
     <source src="fondo de fuego.mp4" type="video/mp4">
 </video>
 
-<!-- 📞 TEL -->
-<a href="tel:+522222394714" class="telefono-float">
-    📞 222 239 4714
-</a>
+<div class="overlay"></div>
 
-<!-- 🖼️ LOGO -->
-<img src="escudo.png" class="foto-perfil">
+<!-- 🔥 HERO -->
+<section class="hero">
 
-<!-- 📦 CONTENIDO -->
-<div class="contenido">
+    <img src="escudo.png" class="logo">
 
-    <h1>LOS PINCHES TACOS 72 🌮</h1>
-    <h2>🔥 Sabor regio que no perdona 🔥</h2>
+    <h1>LOS PINCHES TACOS 72</h1>
+    <h2>🔥 El verdadero sabor regio 🔥</h2>
 
     <p>
-        Tacos, burritos, papas y el brutal corte T-Bone 🥩  
-        Todo con puro sabor del norte.
+        Tacos, burritos, papas asadas y cortes premium 🥩<br>
+        100% sirloin directo al carbón
     </p>
 
-    <!-- BOTONES -->
     <div class="botones">
-        <button onclick="abrirModal('nuevomenu.jpg')">MENÚ</button>
-        <button onclick="abrirModal('ubicacion.png')">UBICACIÓN</button>
-        <button onclick="abrirModal('nuevohorario.jpg')">HORARIOS</button>
+        <button onclick="abrirModal('nuevomenu.jpg')">Ver Menú</button>
+        <button onclick="abrirModal('ubicacion.png')">Ubicación</button>
     </div>
 
-</div>
+</section>
 
-<!-- 📲 FLOATS -->
-<a href="https://wa.me/522222394714" target="_blank" class="whatsapp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-</a>
+<!-- 🧾 SECCIÓN INFO -->
+<section class="info">
 
-<a href="https://www.facebook.com/" target="_blank" class="facebook">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png">
-</a>
+    <div class="card">
+        <h3>🔥 Calidad</h3>
+        <p>Carne premium, sabor regio auténtico</p>
+    </div>
+
+    <div class="card">
+        <h3>⏰ Horario</h3>
+        <p>Consulta nuestros horarios actualizados</p>
+        <button onclick="abrirModal('nuevohorario.jpg')">Ver Horarios</button>
+    </div>
+
+    <div class="card">
+        <h3>📲 Pedidos</h3>
+        <p>Pide directo por WhatsApp</p>
+    </div>
+
+</section>
+
+<!-- 📲 BOTONES FLOTANTES -->
+<a href="https://wa.me/522222394714" class="whatsapp" target="_blank">💬</a>
+<a href="tel:+522222394714" class="telefono">📞</a>
 
 <!-- 🪟 MODAL -->
 <div id="modal" class="modal">
@@ -63,4 +72,4 @@
 
 <script src="script.js"></script>
 </body>
-</html>;
+</html>

@@ -1,147 +1,148 @@
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    text-align: center;
-    overflow-x: hidden;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    color:white;
+    overflow-x:hidden;
 }
 
 /* 🎥 VIDEO */
-#video-fondo {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
+#bgVideo{
+    position:fixed;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
 }
 
-/* 🔥 CAPA OSCURA */
-body::after {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: -1;
+/* 🌑 OVERLAY */
+.overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    z-index:-1;
 }
 
-/* 📦 CONTENIDO */
-.contenido {
-    margin-top: 80px;
+/* 🔥 HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px;
 }
 
-/* 🖼️ LOGO */
-.foto-perfil {
-    width: 220px;
-    margin-top: 40px;
+.logo{
+    width:140px;
+    margin-bottom:20px;
 }
 
-/* 🧠 TITULOS */
-h1 {
-    font-size: 42px;
-    color: #ff3c00;
-    text-shadow: 0 0 20px orange;
+h1{
+    font-size:40px;
+    font-weight:900;
+    text-shadow:0 0 20px #ff3c00;
 }
 
-h2 {
-    font-size: 22px;
+h2{
+    color:#ffae00;
+    margin:10px 0;
 }
 
-/* 🧾 TEXTO */
-p {
-    max-width: 500px;
-    margin: auto;
-    opacity: 0.9;
+.hero p{
+    margin-top:10px;
+    opacity:0.9;
 }
 
-/* 🔥 BOTONES */
-.botones {
-    margin-top: 30px;
+/* 🔘 BOTONES */
+.botones{
+    margin-top:25px;
 }
 
-button {
-    margin: 10px;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
+button{
+    padding:14px 28px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    font-weight:700;
+    cursor:pointer;
 
-    background: linear-gradient(45deg, red, orange);
-    background-size: 200%;
+    background:linear-gradient(135deg,#ff3c00,#ff8800);
+    color:white;
 
-    animation: fuego 2s infinite;
+    box-shadow:0 0 15px rgba(255,100,0,0.6);
+    transition:0.3s;
 }
 
-@keyframes fuego {
-    0% { background-position: 0% }
-    100% { background-position: 200% }
+button:hover{
+    transform:scale(1.1);
 }
 
-button:hover {
-    transform: scale(1.1);
+/* 🧾 INFO */
+.info{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:40px 20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    border-radius:15px;
+    width:250px;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
 /* 📲 FLOATS */
-.whatsapp, .facebook {
-    position: fixed;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.whatsapp, .telefono{
+    position:fixed;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
 }
 
-.whatsapp {
-    bottom: 20px;
-    background: #25D366;
+.whatsapp{
+    right:20px;
+    bottom:20px;
+    background:#25D366;
 }
 
-.facebook {
-    bottom: 90px;
-    background: #1877F2;
-}
-
-.whatsapp img, .facebook img {
-    width: 30px;
-}
-
-/* 📞 TEL */
-.telefono-float {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    background: rgba(0,0,0,0.6);
-    padding: 10px 15px;
-    border-radius: 10px;
+.telefono{
+    left:20px;
+    bottom:20px;
+    background:#ff3c00;
 }
 
 /* 🪟 MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    top: 0;
-    left: 0;
-    z-index: 1000;
+.modal{
+    display:none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    z-index:2000;
 }
 
-.modal img {
-    display: block;
-    margin: 80px auto;
-    max-width: 90%;
-    border-radius: 10px;
+.modal img{
+    display:block;
+    margin:5% auto;
+    max-width:90%;
+    border-radius:10px;
 }
 
-.cerrar {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    cursor: pointer;
+.cerrar{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:40px;
+    cursor:pointer;
 }
