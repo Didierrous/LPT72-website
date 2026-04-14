@@ -6,64 +6,61 @@
 
 <title>Los Pinches Tacos 72</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- 🎥 VIDEO FONDO -->
+<!-- 🔥 VIDEO FONDO -->
 <video autoplay muted loop playsinline id="video-fondo">
     <source src="fondo de fuego.mp4" type="video/mp4">
 </video>
-
-<!-- 🔥 OVERLAY OSCURO -->
-<div class="overlay"></div>
 
 <!-- 📞 TEL -->
 <a href="tel:+522222394714" class="telefono-float">
     📞 222 239 4714
 </a>
 
-<!-- 🧠 CONTENIDO -->
-<div class="container">
+<!-- 🖼️ LOGO -->
+<img src="escudo.png" class="foto-perfil">
 
-    <img src="escudo.png" class="logo">
+<!-- 📦 CONTENIDO -->
+<div class="contenido">
 
-    <h1>Los Pinches Tacos 72 🌮</h1>
-    <h2>🔥 Sabor regio que prende 🔥</h2>
+    <h1>LOS PINCHES TACOS 72 🌮</h1>
+    <h2>🔥 Sabor regio que no perdona 🔥</h2>
 
-    <p class="descripcion">
-        Tacos, burritos, papas asadas y cortes premium 🥩<br>
-        Hechos con 100% sirloin al estilo Monterrey
+    <p>
+        Tacos, burritos, papas y el brutal corte T-Bone 🥩  
+        Todo con puro sabor del norte.
     </p>
 
     <!-- BOTONES -->
     <div class="botones">
-        <button onclick="abrirModal('nuevomenu.jpg')">Menú</button>
-        <button onclick="abrirModal('ubicacion.png')">Ubicación</button>
-        <button onclick="abrirModal('nuevohorario.jpg')">Horarios</button>
+        <button onclick="abrirModal('nuevomenu.jpg')">MENÚ</button>
+        <button onclick="abrirModal('ubicacion.png')">UBICACIÓN</button>
+        <button onclick="abrirModal('nuevohorario.jpg')">HORARIOS</button>
     </div>
 
 </div>
 
-<!-- 🖼️ MODAL -->
-<div id="modal" class="modal">
-    <span class="cerrar">&times;</span>
-    <img id="imgModal">
-</div>
-
-<!-- 📱 FLOATS -->
-<a href="https://wa.me/522222394714" class="whatsapp-float" target="_blank">
+<!-- 📲 FLOATS -->
+<a href="https://wa.me/522222394714" target="_blank" class="whatsapp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
-<a href="https://www.facebook.com/people/Los-Pinches-Tacos-72/61569396328813/" class="facebook-float" target="_blank">
+<a href="https://www.facebook.com/" target="_blank" class="facebook">
     <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png">
 </a>
 
-<script src="script.js"></script>
+<!-- 🪟 MODAL -->
+<div id="modal" class="modal">
+    <span class="cerrar" onclick="cerrarModal()">×</span>
+    <img id="imgModal">
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>

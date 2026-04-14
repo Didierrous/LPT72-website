@@ -1,155 +1,147 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    overflow-x:hidden;
-    color:white;
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
 }
 
 /* 🎥 VIDEO */
-#video-fondo{
-    position:fixed;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    z-index:-2;
+#video-fondo {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
 }
 
-/* 🌑 OVERLAY */
-.overlay{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
-    z-index:-1;
+/* 🔥 CAPA OSCURA */
+body::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
 }
 
 /* 📦 CONTENIDO */
-.container{
-    text-align:center;
-    padding:60px 20px;
+.contenido {
+    margin-top: 80px;
 }
 
-/* 🧠 LOGO */
-.logo{
-    width:180px;
-    margin-bottom:20px;
-    filter: drop-shadow(0 0 10px orange);
+/* 🖼️ LOGO */
+.foto-perfil {
+    width: 220px;
+    margin-top: 40px;
 }
 
-/* 🔥 TITULOS */
-h1{
-    font-size:48px;
-    font-weight:900;
-    text-shadow:0 0 20px #ff3c00;
+/* 🧠 TITULOS */
+h1 {
+    font-size: 42px;
+    color: #ff3c00;
+    text-shadow: 0 0 20px orange;
 }
 
-h2{
-    margin-top:10px;
-    font-weight:500;
-    color:#ffae00;
+h2 {
+    font-size: 22px;
 }
 
-/* 📄 TEXTO */
-.descripcion{
-    margin-top:20px;
-    font-size:18px;
-    opacity:0.9;
+/* 🧾 TEXTO */
+p {
+    max-width: 500px;
+    margin: auto;
+    opacity: 0.9;
 }
 
-/* 🔘 BOTONES */
-.botones{
-    margin-top:40px;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+/* 🔥 BOTONES */
+.botones {
+    margin-top: 30px;
 }
 
-button{
-    padding:15px 30px;
-    border:none;
-    border-radius:12px;
-    font-size:16px;
-    font-weight:700;
-    cursor:pointer;
+button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
 
-    background:linear-gradient(135deg,#ff3c00,#ff8800);
-    color:white;
+    background: linear-gradient(45deg, red, orange);
+    background-size: 200%;
 
-    box-shadow:0 0 15px rgba(255,100,0,0.6);
-
-    transition:0.3s;
+    animation: fuego 2s infinite;
 }
 
-button:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 25px rgba(255,120,0,1);
+@keyframes fuego {
+    0% { background-position: 0% }
+    100% { background-position: 200% }
 }
 
-/* 📱 FLOATS */
-.whatsapp-float, .facebook-float{
-    position:fixed;
-    right:20px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:1000;
+button:hover {
+    transform: scale(1.1);
 }
 
-.whatsapp-float{
-    bottom:20px;
-    background:#25D366;
+/* 📲 FLOATS */
+.whatsapp, .facebook {
+    position: fixed;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.facebook-float{
-    bottom:90px;
-    background:#1877F2;
+.whatsapp {
+    bottom: 20px;
+    background: #25D366;
 }
 
-.whatsapp-float img, .facebook-float img{
-    width:30px;
+.facebook {
+    bottom: 90px;
+    background: #1877F2;
+}
+
+.whatsapp img, .facebook img {
+    width: 30px;
 }
 
 /* 📞 TEL */
-.telefono-float{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:rgba(0,0,0,0.6);
-    padding:10px 15px;
-    border-radius:10px;
-    font-weight:bold;
+.telefono-float {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background: rgba(0,0,0,0.6);
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
-/* 🖼️ MODAL */
-.modal{
-    display:none;
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.9);
-    z-index:2000;
+/* 🪟 MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-.modal img{
-    display:block;
-    margin:5% auto;
-    max-width:90%;
-    border-radius:10px;
+.modal img {
+    display: block;
+    margin: 80px auto;
+    max-width: 90%;
+    border-radius: 10px;
 }
 
-.cerrar{
-    position:absolute;
-    top:20px;
-    right:30px;
-    font-size:40px;
-    cursor:pointer;
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
 }
