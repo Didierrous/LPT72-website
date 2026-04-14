@@ -1,193 +1,155 @@
-/* Estilos generales para la página */
-
-/* Foto de perfil */
-.foto-perfil {
-    width: 650px;
-    height: 650px; /* CUADRADA */
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-    margin: 20px auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-
-
-/* Títulos y texto */
-h1 {
-    font-size: 48px;
-    font-weight: 800;
-    color: #ff3c00;
-    text-shadow: 
-        0 0 10px rgba(255, 60, 0, 0.8),
-        0 0 20px rgba(255, 100, 0, 0.6);
-}
-h2 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-top: 10px;
+body{
+    overflow-x:hidden;
+    color:white;
 }
 
-h3 {
-    font-size: 18px;
-    font-weight: 400;
-    color: #f2f2f2;
-    line-height: 1.6;
+/* 🎥 VIDEO */
+#video-fondo{
+    position:fixed;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
 }
 
-p {
-    font-size: 1.2em;
-    color: #f2f2f2;
+/* 🌑 OVERLAY */
+.overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:-1;
 }
 
-/* Contenedor de botones */
-.botones-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
+/* 📦 CONTENIDO */
+.container{
+    text-align:center;
+    padding:60px 20px;
 }
 
-button {
-    background: linear-gradient(45deg, #ff0000, #ff7a00, #ff0000);
-    background-size: 300% 300%;
-    color: white;
-    padding: 16px 32px;
-    font-size: 18px;
-    font-weight: 900;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    box-shadow: 0 0 15px rgba(255, 80, 0, 0.8);
-
-    animation: fuego 2s infinite linear;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* 🧠 LOGO */
+.logo{
+    width:180px;
+    margin-bottom:20px;
+    filter: drop-shadow(0 0 10px orange);
 }
 
-/* 🔥 ANIMACIÓN */
-@keyframes fuego {
-    0% {
-        background-position: 0% 50%;
-        box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
-    }
-    50% {
-        background-position: 100% 50%;
-        box-shadow: 0 0 30px rgba(255, 120, 0, 1);
-    }
-    100% {
-        background-position: 0% 50%;
-        box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
-    }
+/* 🔥 TITULOS */
+h1{
+    font-size:48px;
+    font-weight:900;
+    text-shadow:0 0 20px #ff3c00;
 }
 
-/* 🔥 HOVER */
-button:hover {
-    transform: scale(1.12);
-    box-shadow: 0 0 35px rgba(255, 100, 0, 1);
+h2{
+    margin-top:10px;
+    font-weight:500;
+    color:#ffae00;
 }
 
-/* Foto del comedor */
-.foto-comedor {
-    width: 350px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 20px auto;
-}
-.facebook-float {
-    position: fixed;
-    width: 65px;
-    height: 65px;
-    bottom: 25px;
-    right: 20px;
-    background-color: #1877F2;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
+/* 📄 TEXTO */
+.descripcion{
+    margin-top:20px;
+    font-size:18px;
+    opacity:0.9;
 }
 
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 25px;
-    right: 20px;
-    background-color: #25D366;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-        .whatsapp-float img {
-    width: 32px !important;
-    height: 32px !important;
-    object-fit: contain;
+/* 🔘 BOTONES */
+.botones{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-.pergaminonormal {
-    width: 90%;
-    max-width: 500px;
-    border-radius: 10px;
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#ff3c00,#ff8800);
+    color:white;
+
+    box-shadow:0 0 15px rgba(255,100,0,0.6);
+
+    transition:0.3s;
 }
 
-
-.telefono-float {
-    position: fixed;
-    bottom: 20px;
-     left: 20px; /* 👈 lo manda a la izquierda */
-    color: white; /* 👈 letras blancas */
-    font-weight: bold; /* 👈 negritas */
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    z-index: 2000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px rgba(255,120,0,1);
 }
 
-/* Animación de aparición de botones y elementos */
-.animar {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: aparecer 1s ease forwards; /* se activa automáticamente al cargar */
+/* 📱 FLOATS */
+.whatsapp-float, .facebook-float{
+    position:fixed;
+    right:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
 }
 
-@keyframes aparecer {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.whatsapp-float{
+    bottom:20px;
+    background:#25D366;
 }
-#video-fondo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* detrás de todo */
+
+.facebook-float{
+    bottom:90px;
+    background:#1877F2;
 }
-body {
-    font-family: 'Poppins', sans-serif;
-    background-image: url('ComedorLPT72.jpg'); /* fondo estático mientras carga el video */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: white;
+
+.whatsapp-float img, .facebook-float img{
+    width:30px;
 }
-#btnmenu { animation-delay: 0.2s; }
-#btnubicacion { animation-delay: 0.5s; }
-#btnhorario { animation-delay: 0.8s; }
+
+/* 📞 TEL */
+.telefono-float{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:rgba(0,0,0,0.6);
+    padding:10px 15px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* 🖼️ MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    z-index:2000;
+}
+
+.modal img{
+    display:block;
+    margin:5% auto;
+    max-width:90%;
+    border-radius:10px;
+}
+
+.cerrar{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:40px;
+    cursor:pointer;
+}

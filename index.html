@@ -1,403 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="escudo.png">
+<title>Los Pinches Tacos 72</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">    
-<!-- Conectar CSS externo -->
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-    <title>Los Pinches Tacos 72 – Cortes y Tacos Regios</title>
-
-    <meta name="description" content="Los Pinches Tacos 72: El auténtico sabor regio.
-     T-Bone, frijoles charros y el mejor menú del norte. Visítanos y disfruta de Monterrey en cada plato.">
-
-    <style>
-
-       
-        /* MODAL (pantalla oscura) */
-        .modal {
-            display: none; 
-            position: fixed;
-            z-index: 1000;
-            padding-top: 80px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        /* Imagen dentro del modal */
-        .modal-contenido {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 10px;
-        }
-
-        /* Botón cerrar */
-        .cerrar {
-            position: absolute;
-            top: 30px;
-            right: 40px;
-            color: #fff;
-            font-size: 40px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        /* Fondo general */
-        body {        
-            background-size: cover;  
-            background-position: center; 
-            background-repeat: no-repeat; 
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            color: white;
-        }
-
-        /* Foto de perfil */
-        .foto-perfil {
-            width: 350px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-            display: block;
-            margin: 90px auto 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        h3, h4 {
-            color: white;
-        }
-
-        p {
-            font-size: 1.2em;
-            color: #ddd;
-        }
-
-        /* Botones centrados */
-        .botones-container {
-            display: flex;
-            justify-content: center; 
-            gap: 20px; 
-            margin-top: 40px; 
-        }
-
-
-
-        /* BOTÓN FLOTANTE WHATSAPP */
-        .whatsapp-float {
-            position: fixed;
-            width: 65px;
-            height: 65px;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25D366;
-            border-radius: 50%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-        }
-
-        .whatsapp-icon {
-            width: 40px;
-            height: 40px;
-            
-        }
-        
-
-  .facebook-float {
-    position: fixed;
-    width: 65px;
-    height: 65px;
-    bottom: 100px; /* arriba del WhatsApp */
-    right: 25px;
-    background-color: #1877F2; /* azul oficial */
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-
-.facebook-icon {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-     
-
-
-
-/* Modal general */
-.modal {
-    display: none; /* oculto por defecto */
-    position: fixed; /* sobre todo el contenido */
-    z-index: 2000; /* encima de todo */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8); /* fondo oscuro semitransparente */
-    overflow: auto;
-    padding-top: 50px;
-}
-
-
-
-
-/* Botón cerrar */
-.modal .cerrar {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.telefono-float {
-    position: fixed;
-    bottom: 20px;
-     left: 20px; /* 👈 lo manda a la izquierda */
-    color: white; /* 👈 letras blancas */
-    font-weight: bold; /* 👈 negritas */
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    z-index: 2000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-.animar {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
-}
-
-.animar.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-#video-fondo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* 👈 atrás de todo */
-}
-/* 🔥 BOTONES FUEGO */
-button {
-    background: linear-gradient(45deg, #ff0000, #ff7a00, #ff0000);
-    background-size: 300% 300%;
-    color: white;
-    padding: 16px 32px;
-    font-size: 18px;
-    font-weight: 900;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    box-shadow: 0 0 15px rgba(255, 80, 0, 0.8);
-
-    animation: fuego 2s infinite linear;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-@keyframes fuego {
-    0% {
-        background-position: 0% 50%;
-        box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
-    }
-    50% {
-        background-position: 100% 50%;
-        box-shadow: 0 0 30px rgba(255, 120, 0, 1);
-    }
-    100% {
-        background-position: 0% 50%;
-        box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
-    }
-}
-
-button:hover {
-    transform: scale(1.12);
-    box-shadow: 0 0 35px rgba(255, 100, 0, 1);
-}
-h1 {
-    font-size: 48px;
-    font-weight: 800;
-    color: #ff3c00;
-    text-shadow: 
-        0 0 10px rgba(255, 60, 0, 0.8),
-        0 0 20px rgba(255, 100, 0, 0.6);
-}
-    </style>
 </head>
 
 <body>
- 
 
- <video autoplay muted loop playsinline id="video-fondo" preload="auto">
-  <source src="fondo de fuego.mp4" type="video/mp4">
+<!-- 🎥 VIDEO FONDO -->
+<video autoplay muted loop playsinline id="video-fondo">
+    <source src="fondo de fuego.mp4" type="video/mp4">
 </video>
-    
 
-    
-<!-- TELÉFONO (AFUERA DEL MODAL) -->
-<a  href="tel:+522222394714" class="telefono-float animar">
+<!-- 🔥 OVERLAY OSCURO -->
+<div class="overlay"></div>
+
+<!-- 📞 TEL -->
+<a href="tel:+522222394714" class="telefono-float">
     📞 222 239 4714
 </a>
 
-    <!-- Foto de Perfil --><!-- Foto de Perfil -->
-<img src="escudo.png" alt="Logo de LPT72" class="foto-perfil animar">
+<!-- 🧠 CONTENIDO -->
+<div class="container">
 
-<!--Fondo oscuro detras de las letras de presentacion-->
-<div style="
-    background-color: rgba(0,0,0,0.5); 
-    color: white; 
-    padding: 20px; 
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: center;
-">
-    <!-- Inicio de Presentación -->
-    <h1>Bienvenidos a Los Pinches Tacos 72 🌮</h1>
-    <h2>Donde cada mordida es una explosión de sabor 🔥</h2>
+    <img src="escudo.png" class="logo">
 
-    <h3>Disfruta de nuestros Tacos, Burritos, Papas Asadas y
-         el irresistible Corte T-Bone, todo preparado con 100% sirloin🥩</b></h3>
+    <h1>Los Pinches Tacos 72 🌮</h1>
+    <h2>🔥 Sabor regio que prende 🔥</h2>
 
-    <!-- Botones centrados -->
-    <div class="botones-container animar">
-        <button id="btnmenu">Menú Regio</button>
-        <button id="btnubicacion">Ubicación</button>
-        <button id="btnhorario">Horarios</button>
+    <p class="descripcion">
+        Tacos, burritos, papas asadas y cortes premium 🥩<br>
+        Hechos con 100% sirloin al estilo Monterrey
+    </p>
+
+    <!-- BOTONES -->
+    <div class="botones">
+        <button onclick="abrirModal('nuevomenu.jpg')">Menú</button>
+        <button onclick="abrirModal('ubicacion.png')">Ubicación</button>
+        <button onclick="abrirModal('nuevohorario.jpg')">Horarios</button>
     </div>
 
-    <h3><i>Con la tradición de Monterrey los venimos a acompañar</i></h3>
+</div>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/522222394714" class="whatsapp-float animar" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon">
-    </a>
+<!-- 🖼️ MODAL -->
+<div id="modal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img id="imgModal">
+</div>
 
-    <!-- Botón flotante de Facebook -->
-<a href="https://www.facebook.com/people/Los-Pinches-Tacos-72/61569396328813/" 
-   class="facebook-float animar" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png" 
-         class="facebook-icon">
+<!-- 📱 FLOATS -->
+<a href="https://wa.me/522222394714" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
 
+<a href="https://www.facebook.com/people/Los-Pinches-Tacos-72/61569396328813/" class="facebook-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_(2019).png">
+</a>
 
-    <!-- Ventana Modal única -->
-    <div id="modalmenu" class="modal animar">
-        <span class="cerrar">&times;</span>
-        <img class="modal-contenido" id="imgmenu">
-    </div>
-
-    <!-- Script JS -->
-    <script>
-        const modal = document.getElementById("modalmenu");
-        const imgModal = document.getElementById("imgmenu");
-        const cerrar = document.querySelector(".cerrar");
-
-        function abrirModal(foto) {
-            imgModal.src = foto;
-            modal.style.display = "block";
-        }
-
-        // Botones
-        document.getElementById("btnmenu").onclick = () => abrirModal("nuevomenu.jpg");
-        document.getElementById("btnubicacion").onclick = () => abrirModal("ubicacion.png");
-        document.getElementById("btnhorario").onclick = () => abrirModal("nuevohorario.jpg");
-
-        // Cerrar modal
-        cerrar.onclick = () => modal.style.display = "none";
-
-        window.onclick = function(event) {
-            if (event.target == modal) modal.style.display = "none";
-        }
-
-function abrirHistoria() {
-    document.getElementById('modalHistoria').style.display = 'block';
-}
-
-function cerrarHistoria() {
-    document.getElementById('modalHistoria').style.display = 'none';
-}
-
-// Cerrar al hacer click fuera del contenido
-window.onclick = function(event) {
-    const modal = document.getElementById('modalHistoria');
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-}
-
-        
-function showSection(id) {
-    // Oculta todas las secciones
-    document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
-    // Muestra la sección seleccionada
-    document.getElementById(id).style.display = 'block';
-}
-
-
-// Animación al 
-//cargar
-window.addEventListener("load", () => {
-    const elementos = document.querySelectorAll(".animar");
-
-    elementos.forEach((el, i) => {
-        setTimeout(() => {
-            el.classList.add("visible");
-        }, i * 300); // retraso entre elementos
-    });
-});
-    </script>
-
- 
-
-<!-- Barra lateral -->
-<div class="sidebar">
-    <button onclick="abrirHistoria()">Nuestra Historia</button>
-</div>
-
-<!-- Modal de Nuestra Historia -->
-
-<div id="modalHistoria" class="modal">
-    <span class="cerrar" onclick="cerrarHistoria()">&times;</span>
-
-    <div class="historia-container">
-        <img src="pergaminonormal.png" alt="pergaminonormal" class="pergaminonormal">
-    </div>
-
-</div>
-       
- <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Los Pinches Tacos 72 - Todos los derechos reservados</p>
-  </footer>
-
-
-
-
+<script src="script.js"></script>
 
 </body>
 </html>
