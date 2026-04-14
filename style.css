@@ -2,136 +2,91 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
 }
 
 body{
+    font-family:'Poppins', sans-serif;
     color:white;
-    overflow-x:hidden;
+    text-align:center;
 }
 
-/* 🎥 VIDEO */
-#bgVideo{
+/* 🔥 FONDO */
+.bg{
     position:fixed;
     width:100%;
     height:100%;
-    object-fit:cover;
-    z-index:-2;
-}
-
-/* 🌑 OVERLAY */
-.overlay{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:linear-gradient(to bottom, rgba(0,0,0,0.7), black);
+    background:url("escudo.png") center/cover no-repeat;
+    filter:brightness(0.3);
     z-index:-1;
 }
 
-/* 🔥 HERO */
-.hero{
-    text-align:center;
-    padding:100px 20px 40px;
+/* 🔴 CONTENIDO */
+.contenedor{
+    padding:80px 20px;
 }
 
-.logo{
-    width:140px;
-    margin-bottom:20px;
-}
-
-h1{
-    font-size:42px;
-    font-weight:800;
+/* 🧠 TITULO */
+.titulo{
+    font-family:'Anton', sans-serif;
+    font-size:48px;
+    color:#ff0000;
     letter-spacing:2px;
-    text-shadow:0 0 20px #ff3c00;
+
+    text-shadow:
+        0 0 10px red,
+        0 0 20px orange;
 }
 
-.frase{
+/* 🟡 SUB */
+.subtitulo{
     margin-top:10px;
-    opacity:0.8;
-    font-size:16px;
+    color:yellow;
 }
 
-/* 🔥 IMPACTO */
-.impacto{
-    text-align:center;
-    padding:60px 20px;
+/* 🧾 TEXTO */
+.descripcion{
+    margin-top:20px;
+    max-width:400px;
+    margin-left:auto;
+    margin-right:auto;
+    opacity:0.9;
 }
 
-.impacto h2{
-    font-size:28px;
-    line-height:1.5;
-    font-weight:800;
-    color:#ff7a00;
-
-    animation: glow 2s infinite alternate;
+/* 🍖 ITEMS */
+.platos{
+    margin-top:40px;
 }
 
-@keyframes glow{
-    from{ text-shadow:0 0 10px orange; }
-    to{ text-shadow:0 0 30px red; }
+.item{
+    margin:10px 0;
+    font-size:18px;
 }
 
-/* 🔥 VISUAL */
-.visual{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    padding:40px 20px;
-    flex-wrap:wrap;
-}
-
-.bloque{
-    width:120px;
-    height:120px;
-    border-radius:20px;
-
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(10px);
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    transition:0.3s;
-}
-
-.bloque span{
-    font-size:30px;
-}
-
-.bloque:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 20px orange;
-}
-
-/* 📲 REDES */
-.redes{
+/* 📲 CTA */
+.cta{
     position:fixed;
-    bottom:30px;
+    bottom:20px;
     width:100%;
     display:flex;
-    justify-content:center;
-    gap:20px;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
 }
 
-/* BOTONES REDES */
-.redes a{
-    padding:14px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:600;
-    color:white;
-    backdrop-filter:blur(10px);
-}
-
-/* WHATSAPP */
-.wa{
+/* BOTONES */
+.btn-wa{
     background:#25D366;
+    padding:15px 30px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-/* FACEBOOK */
-.fb{
+.btn-fb{
     background:#1877F2;
+    padding:12px 25px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
 }
