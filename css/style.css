@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    color:white;
+    background:black;
+}
+
+/* 🔥 HERO */
+.hero{
+    height:100vh;
+    background:url("../img/escudo.png") center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-family:'Anton';
+    font-size:50px;
+    color:#ff3c00;
+}
+
+.hero p{
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    background:#ff3c00;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+/* INFO */
+.info{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:#111;
+    padding:20px;
+    border-radius:10px;
+    width:250px;
+}
+
+/* MENU */
+.menu{
+    padding:50px;
+}
+
+.menu-header{
+    padding:20px;
+    text-align:center;
+}
+
+/* 📲 FLOATING */
+.floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.whatsapp, .facebook{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    color:white;
+    text-decoration:none;
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.facebook{
+    background:#1877F2;
+}
+
+/* 📱 RESPONSIVE */
+@media(max-width:600px){
+
+.hero h1{
+    font-size:32px;
+}
+
+.card{
+    width:90%;
+}
+
+}
