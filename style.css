@@ -24,14 +24,14 @@ body{
     position:fixed;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.65);
+    background:linear-gradient(to bottom, rgba(0,0,0,0.7), black);
     z-index:-1;
 }
 
 /* 🔥 HERO */
 .hero{
     text-align:center;
-    padding:80px 20px;
+    padding:100px 20px 40px;
 }
 
 .logo{
@@ -40,47 +40,40 @@ body{
 }
 
 h1{
-    font-size:40px;
-    font-weight:900;
+    font-size:42px;
+    font-weight:800;
+    letter-spacing:2px;
     text-shadow:0 0 20px #ff3c00;
 }
 
-h2{
-    color:#ffae00;
-    margin:10px 0;
-}
-
-.hero p{
+.frase{
     margin-top:10px;
-    opacity:0.9;
+    opacity:0.8;
+    font-size:16px;
 }
 
-/* 🔘 BOTONES */
-.botones{
-    margin-top:25px;
+/* 🔥 IMPACTO */
+.impacto{
+    text-align:center;
+    padding:60px 20px;
 }
 
-button{
-    padding:14px 28px;
-    margin:10px;
-    border:none;
-    border-radius:10px;
-    font-weight:700;
-    cursor:pointer;
+.impacto h2{
+    font-size:28px;
+    line-height:1.5;
+    font-weight:800;
+    color:#ff7a00;
 
-    background:linear-gradient(135deg,#ff3c00,#ff8800);
-    color:white;
-
-    box-shadow:0 0 15px rgba(255,100,0,0.6);
-    transition:0.3s;
+    animation: glow 2s infinite alternate;
 }
 
-button:hover{
-    transform:scale(1.1);
+@keyframes glow{
+    from{ text-shadow:0 0 10px orange; }
+    to{ text-shadow:0 0 30px red; }
 }
 
-/* 🧾 INFO */
-.info{
+/* 🔥 VISUAL */
+.visual{
     display:flex;
     justify-content:center;
     gap:20px;
@@ -88,61 +81,57 @@ button:hover{
     flex-wrap:wrap;
 }
 
-.card{
+.bloque{
+    width:120px;
+    height:120px;
+    border-radius:20px;
+
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(10px);
-    padding:20px;
-    border-radius:15px;
-    width:250px;
 
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-/* 📲 FLOATS */
-.whatsapp, .telefono{
-    position:fixed;
-    width:60px;
-    height:60px;
-    border-radius:50%;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    font-size:24px;
+
+    transition:0.3s;
 }
 
-.whatsapp{
-    right:20px;
-    bottom:20px;
+.bloque span{
+    font-size:30px;
+}
+
+.bloque:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px orange;
+}
+
+/* 📲 REDES */
+.redes{
+    position:fixed;
+    bottom:30px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+/* BOTONES REDES */
+.redes a{
+    padding:14px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    color:white;
+    backdrop-filter:blur(10px);
+}
+
+/* WHATSAPP */
+.wa{
     background:#25D366;
 }
 
-.telefono{
-    left:20px;
-    bottom:20px;
-    background:#ff3c00;
-}
-
-/* 🪟 MODAL */
-.modal{
-    display:none;
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.9);
-    z-index:2000;
-}
-
-.modal img{
-    display:block;
-    margin:5% auto;
-    max-width:90%;
-    border-radius:10px;
-}
-
-.cerrar{
-    position:absolute;
-    top:20px;
-    right:30px;
-    font-size:40px;
-    cursor:pointer;
+/* FACEBOOK */
+.fb{
+    background:#1877F2;
 }

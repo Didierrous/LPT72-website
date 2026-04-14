@@ -7,7 +7,7 @@
 <title>Los Pinches Tacos 72</title>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,49 +25,53 @@
     <img src="escudo.png" class="logo">
 
     <h1>LOS PINCHES TACOS 72</h1>
-    <h2>🔥 El verdadero sabor regio 🔥</h2>
 
-    <p>
-        Tacos, burritos, papas asadas y cortes premium 🥩<br>
-        100% sirloin directo al carbón
+    <p class="frase">
+        Donde el fuego manda y el sabor no perdona 🔥
     </p>
 
-    <div class="botones">
-        <button onclick="abrirModal('nuevomenu.jpg')">Ver Menú</button>
-        <button onclick="abrirModal('ubicacion.png')">Ubicación</button>
+</section>
+
+<!-- 🔥 FRASE GRANDE -->
+<section class="impacto">
+    <h2>
+        CARNE AL CARBÓN<br>
+        SABOR REGIO REAL<br>
+        EXPERIENCIA 🔥
+    </h2>
+</section>
+
+<!-- 🔥 BLOQUES VISUALES -->
+<section class="visual">
+
+    <div class="bloque">
+        <span>🌮</span>
+        <p>Tacos que sí llenan</p>
+    </div>
+
+    <div class="bloque">
+        <span>🥩</span>
+        <p>Cortes al carbón</p>
+    </div>
+
+    <div class="bloque">
+        <span>🔥</span>
+        <p>Sabor que se respeta</p>
     </div>
 
 </section>
 
-<!-- 🧾 SECCIÓN INFO -->
-<section class="info">
+<!-- 📲 REDES -->
+<div class="redes">
 
-    <div class="card">
-        <h3>🔥 Calidad</h3>
-        <p>Carne premium, sabor regio auténtico</p>
-    </div>
+    <a href="https://wa.me/522222394714" target="_blank" class="wa">
+        WhatsApp
+    </a>
 
-    <div class="card">
-        <h3>⏰ Horario</h3>
-        <p>Consulta nuestros horarios actualizados</p>
-        <button onclick="abrirModal('nuevohorario.jpg')">Ver Horarios</button>
-    </div>
+    <a href="https://www.facebook.com/" target="_blank" class="fb">
+        Facebook
+    </a>
 
-    <div class="card">
-        <h3>📲 Pedidos</h3>
-        <p>Pide directo por WhatsApp</p>
-    </div>
-
-</section>
-
-<!-- 📲 BOTONES FLOTANTES -->
-<a href="https://wa.me/522222394714" class="whatsapp" target="_blank">💬</a>
-<a href="tel:+522222394714" class="telefono">📞</a>
-
-<!-- 🪟 MODAL -->
-<div id="modal" class="modal">
-    <span class="cerrar" onclick="cerrarModal()">×</span>
-    <img id="imgModal">
 </div>
 
 <script src="script.js"></script>
